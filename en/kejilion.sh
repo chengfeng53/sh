@@ -1185,7 +1185,7 @@ iptables_panel() {
 
 			  5)
 				  # IP whitelist
-				  read -e -p "Please enter the IP or IP segment to be released:" o_ip
+				  read -e -p "Please enter the IP or IP segment to release:" o_ip
 				  allow_ip $o_ip
 				  ;;
 			  6)
@@ -2121,7 +2121,7 @@ web_security() {
 
 				  22)
 					  send_stats "High load on 5 seconds shield"
-					  echo -e "${gl_huang}The website automatically detects every 5 minutes. When it reaches the detection of a high load, the shield will be automatically turned on, and the low load will be automatically turned off for 5 seconds.${gl_bai}"
+					  echo -e "${gl_huang}The website automatically detects every 5 minutes. When high load is detected, the shield will be automatically turned on, and low load will be automatically turned off for 5 seconds.${gl_bai}"
 					  echo "--------------"
 					  echo "Get CF parameters:"
 					  echo -e "Go to the upper right corner of the cf background, select the API token on the left, and obtain it${gl_huang}Global API Key${gl_bai}"
@@ -3946,7 +3946,7 @@ frps_panel() {
 
 			8)
 				send_stats "Block IP access"
-				echo "If you have accessed the anti-generation domain name, use this function to block IP+ port access, which is more secure."
+				echo "If you have accessed the anti-generation domain name, you can use this function to block IP+ port access, which is more secure."
 				read -e -p "Please enter the port you need to block:" frps_port
 				block_host_port "$frps_port" "$ipv4_address"
 				;;
@@ -4989,7 +4989,7 @@ elrepo_install() {
 		linux_Settings
 	fi
 	# Print detected operating system information
-	echo "Detected operating systems:$os_name $os_version"
+	echo "Operating system detected:$os_name $os_version"
 	# Install the corresponding ELRepo warehouse configuration according to the system version
 	if [[ "$os_version" == 8 ]]; then
 		echo "Install ELRepo repository configuration (version 8)..."
@@ -7517,7 +7517,7 @@ linux_ldnmp() {
 	echo -e "${gl_huang}------------------------"
 	echo -e "${gl_huang}21.  ${gl_bai}Install nginx only${gl_huang}★${gl_bai}                     ${gl_huang}22.  ${gl_bai}Site redirection"
 	echo -e "${gl_huang}23.  ${gl_bai}Site reverse proxy-IP+port${gl_huang}★${gl_bai}            ${gl_huang}24.  ${gl_bai}Site reverse proxy - domain name"
-	echo -e "${gl_huang}25.  ${gl_bai}Install the Bitwarden password management platform${gl_huang}26.  ${gl_bai}Install Halo Blog Website"
+	echo -e "${gl_huang}25.  ${gl_bai}Install Bitwarden password management platform${gl_huang}26.  ${gl_bai}Install Halo Blog Website"
 	echo -e "${gl_huang}27.  ${gl_bai}Install AI Painting Prompt Word Generator${gl_huang}28.  ${gl_bai}Site reverse proxy-load balancing"
 	echo -e "${gl_huang}30.  ${gl_bai}Customize static site"
 	echo -e "${gl_huang}------------------------"
@@ -7693,7 +7693,7 @@ linux_ldnmp() {
 	  echo "Redis port: 6379"
 	  echo ""
 	  echo "Website url: https://$yuming"
-	  echo "Backend login path: /admin"
+	  echo "Background login path: /admin"
 	  echo "------------------------"
 	  echo "Username: admin"
 	  echo "Password: admin"
@@ -8516,7 +8516,7 @@ while true; do
 	  echo -e "${gl_kjlan}53.  ${color53}llama3 chat AI model${gl_kjlan}54.  ${color54}AMH Host Website Building Management Panel"
 	  echo -e "${gl_kjlan}55.  ${color55}FRP intranet penetration (server side)${gl_huang}★${gl_bai}	         ${gl_kjlan}56.  ${color56}FRP intranet penetration (client)${gl_huang}★${gl_bai}"
 	  echo -e "${gl_kjlan}57.  ${color57}Deepseek chat AI big model${gl_kjlan}58.  ${color58}Dify big model knowledge base${gl_huang}★${gl_bai}"
-	  echo -e "${gl_kjlan}59.  ${color59}NewAPI Big Model Asset Management${gl_kjlan}60.  ${color60}JumpServer open source bastion machine"
+	  echo -e "${gl_kjlan}59.  ${color59}NewAPI big model asset management${gl_kjlan}60.  ${color60}JumpServer open source bastion machine"
 	  echo -e "${gl_kjlan}------------------------"
 	  echo -e "${gl_kjlan}61.  ${color61}Online translation server${gl_kjlan}62.  ${color62}RAGFlow big model knowledge base"
 	  echo -e "${gl_kjlan}63.  ${color63}OpenWebUI self-hosted AI platform${gl_huang}★${gl_bai}             ${gl_kjlan}64.  ${color64}it-tools toolbox"
@@ -11428,7 +11428,7 @@ linux_Settings() {
 	  echo -e "${gl_kjlan}17.  ${gl_bai}Firewall Advanced Manager${gl_kjlan}18.  ${gl_bai}Modify the host name"
 	  echo -e "${gl_kjlan}19.  ${gl_bai}Switch system update source${gl_kjlan}20.  ${gl_bai}Timing task management"
 	  echo -e "${gl_kjlan}------------------------"
-	  echo -e "${gl_kjlan}21.  ${gl_bai}Native host analysis${gl_kjlan}22.  ${gl_bai}SSH Defense Program"
+	  echo -e "${gl_kjlan}21.  ${gl_bai}Native host parsing${gl_kjlan}22.  ${gl_bai}SSH Defense Program"
 	  echo -e "${gl_kjlan}23.  ${gl_bai}Automatic shutdown of current limit${gl_kjlan}24.  ${gl_bai}ROOT private key login mode"
 	  echo -e "${gl_kjlan}25.  ${gl_bai}TG-bot system monitoring and early warning${gl_kjlan}26.  ${gl_bai}Fix OpenSSH high-risk vulnerabilities"
 	  echo -e "${gl_kjlan}27.  ${gl_bai}Red Hat Linux kernel upgrade${gl_kjlan}28.  ${gl_bai}Optimization of kernel parameters in Linux system${gl_huang}★${gl_bai}"
@@ -11903,7 +11903,7 @@ EOF
 				echo "3. Tokyo time in Japan 4. Seoul time in South Korea"
 				echo "5. Singapore time 6. Kolkata time in India"
 				echo "7. Dubai time in the UAE 8. Sydney time in Australia"
-				echo "9. Bangkok Time, Thailand"
+				echo "9. Time in Bangkok, Thailand"
 				echo "------------------------"
 				echo "Europe"
 				echo "11. London time in the UK 12. Paris time in France"
@@ -12074,7 +12074,7 @@ EOF
 								  (crontab -l ; echo "0 0 * * $weekday $newquest") | crontab - > /dev/null 2>&1
 								  ;;
 							  3)
-								  read -e -p "Choose when to perform tasks every day? (Hours, 0-23):" hour
+								  read -e -p "Choose what time to perform tasks every day? (Hours, 0-23):" hour
 								  (crontab -l ; echo "0 $hour * * * $newquest") | crontab - > /dev/null 2>&1
 								  ;;
 							  4)
@@ -12129,7 +12129,7 @@ EOF
 
 						  ;;
 					  2)
-						  read -e -p "Please enter the keywords for parsing content that need to be deleted:" delhost
+						  read -e -p "Please enter the keywords of parsing content that need to be deleted:" delhost
 						  sed -i "/$delhost/d" /etc/hosts
 						  send_stats "Local host parsing and deletion"
 						  ;;
@@ -12566,7 +12566,7 @@ EOF
 
 			  echo "Privacy and Security"
 			  echo "The script will collect data on user functions, optimize the script experience, and create more fun and useful functions."
-			  echo "Will collect the script version number, usage time, system version, CPU architecture, country of the machine and the name of the functions used,"
+			  echo "Will collect the script version number, usage time, system version, CPU architecture, country of the machine and the name of the function used,"
 			  echo "------------------------------------------------"
 			  echo -e "Current status:$status_message"
 			  echo "--------------------"
@@ -12703,7 +12703,7 @@ linux_file() {
 			5)  # 删除目录
 				read -e -p "Please enter the directory name to delete:" dirname
 				rm -rf "$dirname" && echo "Directory has been deleted" || echo "Deletion failed"
-				send_stats "Delete directory"
+				send_stats "Delete Directory"
 				;;
 			6)  # 返回上一级选单目录
 				cd ..
